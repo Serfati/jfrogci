@@ -18,7 +18,7 @@ jobs:
          with:
            node-version: 16
        - name: Set CLI Config
-         run: jf npm-config --global=true --repo-resolve=my-npm --repo-deploy=my-npm
+         run: jf npm-config --global=true --repo-resolve=$REPO_NAME --repo-deploy=$REPO_NAME
        - name: Install Deps
          run:  cd package && ls -la && jf npm install
        - name: Run tests
